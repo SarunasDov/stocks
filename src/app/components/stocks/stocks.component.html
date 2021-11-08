@@ -1,4 +1,7 @@
-<h1>Cheap stock market</h1>
+<h1>Stock market</h1>
+<h2>All stocks only 0,99$</h2>
 <ul>
-    <li *ngFor='let stock of stocks'>{{stock.name}}</li>
+    <li *ngFor='let stock of stocks'>{{stock.name}}, {{stock.price}}, {{stock.favorite}}
+        <a [routerLink]="['/stock', stock.code]">Review</a>
+    </li>
 </ul>
